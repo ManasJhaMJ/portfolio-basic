@@ -55,7 +55,7 @@ nav {
     position: fixed;
     top: 0;
     width: 968px;
-    background-color: #fff;
+    background-color: var(--primary-color);
     z-index: 100;
     display: flex;
     justify-content: space-between;
@@ -65,7 +65,8 @@ nav {
     height: 5rem;
 }
 
-.openbtn {
+.openbtn,
+.sidepanel {
     display: none;
 }
 
@@ -498,7 +499,8 @@ button {
         padding: 0;
     }
 
-    .openbtn {
+    .openbtn,
+    .sidepanel {
         display: block;
     }
 
