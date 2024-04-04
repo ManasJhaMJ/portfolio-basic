@@ -66,7 +66,8 @@ nav {
 }
 
 .openbtn,
-.sidepanel {
+.sidepanel,
+#nav-small {
     display: none;
 }
 
@@ -202,39 +203,68 @@ button {
     animation-timing-function: ease;
     animation-direction: alternate;
     mix-blend-mode: luminosity;
-    border: #323332 10px solid;
+    border: #919491 10px solid;
 }
 
 @keyframes blobby {
     0% {
-        border-radius: 54% 46% 60% 40% / 43% 55% 45% 57%;
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     }
 
-    20% {
-        border-radius: 41% 52% 41% 59% / 53% 51% 49% 47%;
-        /* transform: rotate(3deg); */
-    }
-
-    40% {
-        /* transform: rotate(-3deg); */
-        border-radius: 43% 57% 41% 59% / 53% 52% 48% 47%;
-    }
-
-    60% {
-        border-radius: 41% 52% 41% 59% / 53% 51% 49% 47%;
-        /* transform: rotate(3deg); */
-    }
-
-    80% {
-        border-radius: 48% 52% 41% 59% / 48% 58% 42% 52%;
-        /* transform: rotate(3deg); */
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30%;
     }
 
     100% {
-        /* transform: rotate(-3deg); */
-        border-radius: 54% 46% 60% 40% / 43% 55% 45% 57%;
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     }
 }
+
+/* @keyframes blobby {
+    0% {
+        border-radius: 54% 46% 60% 40% / 43% 55% 45% 57%;
+    }
+
+    10% {
+        border-radius: 48% 52% 41% 59% / 44% 56% 54% 50%;
+    }
+
+    20% {
+        border-radius: 44% 56% 54% 50% / 53% 51% 49% 47%;
+    }
+
+    30% {
+        border-radius: 43% 57% 41% 59% / 53% 52% 48% 47%;
+    }
+
+    40% {
+        border-radius: 43% 57% 41% 59% / 54% 56% 54% 50%;
+    }
+
+    50% {
+        border-radius: 41% 52% 41% 59% / 53% 51% 49% 47%;
+    }
+
+    60% {
+        border-radius: 44% 56% 54% 50% / 53% 41% 49% 47%;
+    }
+
+    70% {
+        border-radius: 48% 52% 41% 59% / 48% 58% 42% 52%;
+    }
+
+    80% {
+        border-radius: 54% 56% 54% 50% / 48% 58% 42% 52%;
+    }
+
+    90% {
+        border-radius: 44% 56% 54% 50% / 53% 45% 42% 51%;
+    }
+
+    100% {
+        border-radius: 54% 46% 60% 40% / 43% 55% 45% 57%;
+    }
+} */
 
 #about {
     margin-top: 10rem;
@@ -490,76 +520,117 @@ button {
 
 @media screen and (min-width:0px) and (max-width:425px) {
 
-    body {
+    /* body {
         padding: 0 2rem;
-    }
+    } */
 
     nav {
+        display: none;
+    }
+
+    #nav-small {
+        position: fixed;
+        top: unset;
+        bottom: 0;
         width: 100%;
+        background-color: var(--primary-color);
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: inherit;
         padding: 0;
+        height: fit-content;
+        box-shadow: 0 -2px 4px #0000001a;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .name p {
+        margin: 0.2rem 0;
+        margin-left: 1.5rem;
     }
 
     .openbtn,
     .sidepanel {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
 
     /* The sidepanel menu */
     .sidepanel {
-        height: 100%;
+        height: 0;
         /* Specify a height */
-        width: 0;
+        width: 100%;
         /* 0 width - change this with JavaScript */
         position: fixed;
         /* Stay in place */
         z-index: 1;
         /* Stay on top */
-        top: 0;
+        bottom: 0;
         left: 0;
-        background-color: #0f0f0fcb;
+        background-color: #fff;
         /* Black*/
         overflow-x: hidden;
-
-        backdrop-filter: blur(10px);
         text-align: center;
         /* Disable horizontal scroll */
-        padding-top: 60px;
+        /* padding-top: 60px; */
         /* Place content 60px from the top */
         transition: 0.5s;
         /* 0.5 second transition effect to slide in the sidepanel */
+
+        box-shadow: 0 -2px 4px #0000001a;
+        border-radius: 1rem 1rem 0 0;
     }
 
     /* The sidepanel links */
     .sidepanel a {
-        padding: 8px 8px 8px 32px;
+        padding: 0;
         text-decoration: none;
-        font-size: 25px;
-        color: #c7c7c7;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--secondary-color);
         display: block;
         transition: 0.3s;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 30%;
     }
 
-    /* When you mouse over the navigation links, change their color */
-    .sidepanel a:hover {
-        color: #f1f1f1;
+    .sidepanel a img {
+        width: 20px;
     }
 
     /* Position and style the close button (top right corner) */
     .sidepanel .closebtn {
         position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
+        bottom: 0;
+        right: 22px;
+        font-size: 30px;
         margin-left: 50px;
+    }
+
+    .panel-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 1rem 0;
     }
 
     /* Style the button that is used to open the sidepanel */
     .openbtn {
-        margin-right: 3rem;
+        margin-right: 1.6rem;
+        background-color: transparent;
+        padding: 0.3rem;
     }
 
-    .openbtn:hover {
-        background-color: #444;
+    .openbtn img {
+        display: block;
+        width: 20px;
+    }
+
+    .active {
+        height: 40% !important;
     }
 
     .links {
@@ -567,13 +638,13 @@ button {
     }
 
     .box {
-        margin: 5rem 0 2rem;
+        margin: 4rem 2rem;
         padding-top: 0;
     }
 
     #home {
         flex-direction: column-reverse;
-        height: 100vh;
+        height: 85vh;
     }
 
     .socials,
@@ -592,11 +663,19 @@ button {
     }
 
     .home-text-title h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    .home-text-subtitle {
+        padding-left: 0;
     }
 
     .home-text-subtitle h3 {
         font-size: 1rem;
+    }
+
+    .home-text-subtitle::before {
+        display: none;
     }
 
     button {
