@@ -35,7 +35,7 @@
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#Experience">Experience</a>
+            <a href="#experience">Experience</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
@@ -51,7 +51,7 @@
                 <a href="#about"><img src="./assets/images/navbar/user.png" alt="home"><br>About</a>
                 <a href="#skills"><img src="./assets/images/navbar/skills.png" alt="home"><br>Skills</a>
                 <a href="#projects"><img src="./assets/images/navbar/projects.png" alt="home"><br>Projects</a>
-                <a href="#Experience"><img src="./assets/images/navbar/work.png" alt="home"><br>Experience</a>
+                <a href="#experience"><img src="./assets/images/navbar/work.png" alt="home"><br>Experience</a>
                 <a href="#contact"><img src="./assets/images/navbar/contact.png" alt="home"><br>Contact</a>
             </div>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -61,7 +61,7 @@
     </nav>
 
     <section id="home" class="box">
-        <div class="socials">
+        <div class="socials-top">
             <a href=""><img src="./assets/images/socials/github.png" alt="github"></a>
             <a href=""><img src="./assets/images/socials/linkedin.png" alt="linkedin"></a>
             <a href=""><img src="./assets/images/socials/twitter.png" alt="twitter"></a>
@@ -346,7 +346,8 @@
             <p>Things I've done</p>
         </div>
         <div class="experience-container" data-tilt data-entrance="from-left">
-            <div class="experience" data-tilt data-entrance="from-left">
+            <div class="experience" data-entrance="from-left">
+                <img src="./assets/images/company1.png" alt="company">
                 <h2 class="work-title">Shashtra</h2>
                 <h4 class="work-position">Frontend Developer Intern</h4>
                 <h5 class="work-duration">Feb 2024 - Present</h5>
@@ -356,7 +357,8 @@
                     Improved the frontend of BestUPay's website. Created UI designs for websites using Figma and Canva.
                 </p>
             </div>
-            <div class="experience" data-tilt data-entrance="from-left">
+            <div class="experience" data-entrance="from-left">
+                <img src="./assets/images/company2.png" alt="company">
                 <h2 class="work-title">BestUPay</h2>
                 <h4 class="work-position">Frontend Developer Intern</h4>
                 <h5 class="work-duration">Nov 2023 - Feb 2024</h5>
@@ -367,7 +369,8 @@
                     the UX and engagement.
                 </p>
             </div>
-            <div class="experience" data-tilt data-entrance="from-left">
+            <div class="experience" data-entrance="from-left">
+                <img src="./assets/images/company3.png" alt="company">
                 <h2 class="work-title">MRSDC</h2>
                 <h4 class="work-position">Student web head</h4>
                 <h5 class="work-duration">Sep 2023 - Present</h5>
@@ -380,14 +383,15 @@
         </div>
     </section>
 
-    <section id="achievements">
+    <section id="achievements" class="box">
         <h1>Achievements</h1>
+        <p>Small steps towards a bigger goal</p>
         <div class="swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide"><img src="./assets/images/achievements/1.svg"></div>
                 <div class="swiper-slide"><img src="./assets/images/achievements/2.svg"></div>
+                <div class="swiper-slide"><img src="./assets/images/achievements/1.svg"></div>
                 <div class="swiper-slide"><img src="./assets/images/achievements/3.svg"></div>
                 <div class="swiper-slide"><img src="./assets/images/achievements/4.svg"></div>
                 ...
@@ -403,6 +407,60 @@
             <div class="swiper-scrollbar"></div>
         </div>
     </section>
+
+    <section id="contact" class="box">
+        <div class="contact-title" data-entrance="from-bottom">
+            <h1>Connect With Me</h1>
+            <p>Let's talk!</p>
+        </div>
+        <div class="contact-list">
+            <div class="contact-container">
+                <div class="contact-box-container">
+                    <div class="contact-box">
+                        <a href="">
+                            <span>Gmail</span>
+                            <span><img src="./assets/images/socials/gmail.png" alt=""></span>
+                            <p>jhamanas939<br>@gmail.com</p>
+                        </a>
+                    </div>
+                    <br>
+                    <div class="contact-box">
+                        <a href="">
+                            <span>Twitter</span>
+                            <span><img src="./assets/images/socials/twitter-2.png" alt=""></span>
+                            <p>@ManasJhaMJ</p>
+                        </a>
+                    </div>
+                    <br>
+                    <div class="contact-box">
+                        <a href="">
+                            <span>Discord</span>
+                            <span><img src="./assets/images/socials/discord.png" alt=""></span>
+                            <p>MJ10</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="socials">
+                    <h3>Other Socials</h3>
+                    <a href=""><img src="./assets/images/socials/github-2.png" alt=""></a>
+                    <a href=""><img src="./assets/images/socials/linkedin-2.png" alt=""></a>
+                    <a href=""><img src="./assets/images/socials/instagram.png" alt=""></a>
+                    <a href=""><img src="./assets/images/socials/itch.png" alt=""></a>
+                    <a href=""><img src="./assets/images/socials/youtube.png" alt=""></a>
+                    <a href=""><img src="./assets/images/socials/behance.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <p>© 2024 Manas Jha. All rights reserved.</p>
+            <p>Made with ❤️</p>
+        </div>
+    </footer>
 
     <script src="./index.js"></script>
     <script type="text/javascript" src="./assets/vanilla-tilt.js"></script>
