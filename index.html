@@ -6,9 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manas Jha</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="./styles.css">
 
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- SCROLL-ENTRANCE -->
     <script src="./assets/scroll-entrance-master/src/scroll-entrance.js"></script>
+
     <style>
         /* Ensure elements are hidden while ScrollEntrance is loading */
         .js [data-entrance] {
@@ -372,9 +380,28 @@
         </div>
     </section>
 
-    <section>
+    <section id="achievements">
         <h1>Achievements</h1>
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="./assets/images/achievements/1.svg"></div>
+                <div class="swiper-slide"><img src="./assets/images/achievements/2.svg"></div>
+                <div class="swiper-slide"><img src="./assets/images/achievements/3.svg"></div>
+                <div class="swiper-slide"><img src="./assets/images/achievements/4.svg"></div>
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
 
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
     </section>
 
     <script src="./index.js"></script>
