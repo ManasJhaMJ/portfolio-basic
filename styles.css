@@ -397,6 +397,7 @@ button {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    box-shadow: 42px 22px 24px #0000001a;
 }
 
 .skills-box img {
@@ -486,6 +487,7 @@ button {
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    box-shadow: 42px 22px 24px #0000001a;
 }
 
 .project-box img {
@@ -516,6 +518,78 @@ button {
     margin: 1rem 0.4rem;
     font-size: 0.8rem;
     text-decoration: none;
+}
+
+#experience {
+    margin-top: 10rem;
+}
+
+.experience-title {
+    text-align: center;
+}
+
+.experience-title h1 {
+    color: var(--secondary-color);
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.experience-title p {
+    color: var(--tertiary-color);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.experience-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.experience {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 0.5rem;
+    border: 0.8px solid #d4d0d0;
+    border-radius: 10px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 42px 22px 24px #0000001a;
+}
+
+.experience h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0.5rem;
+}
+
+.experience h4,
+h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    color: var(--tertiary-color);
+}
+
+.experience p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin: 1rem 0 0 0;
+    text-align: justify;
+    padding: 0 1rem;
+    color: var(--tertiary-color);
+}
+
+.experience hr {
+    width: 80%;
+    margin: 1rem 0;
 }
 
 @media screen and (min-width:0px) and (max-width:425px) {
@@ -597,6 +671,7 @@ button {
     }
 
     .sidepanel a img {
+        margin-top: 0.6rem;
         width: 20px;
     }
 
