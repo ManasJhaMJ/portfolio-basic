@@ -67,16 +67,6 @@ nav {
     height: 5rem;
 }
 
-/* Styles for light theme */
-.theme-light {
-    background: #fff;
-}
-
-/* Styles for dark theme */
-.theme-dark {
-    background: #000;
-}
-
 .openbtn,
 .sidepanel,
 #nav-small {
