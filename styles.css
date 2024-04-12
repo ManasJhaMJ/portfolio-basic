@@ -55,7 +55,9 @@ nav {
     position: fixed;
     top: 0;
     width: 968px;
-    background-color: var(--primary-color);
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 1rem 1rem;
     z-index: 100;
     display: flex;
     justify-content: space-between;
@@ -63,6 +65,16 @@ nav {
     color: inherit;
     padding: 0;
     height: 5rem;
+}
+
+/* Styles for light theme */
+.theme-light {
+    background: #fff;
+}
+
+/* Styles for dark theme */
+.theme-dark {
+    background: #000;
 }
 
 .openbtn,
